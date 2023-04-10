@@ -38,6 +38,10 @@ canvas5 = Canvas(tk, width=100, height=100)
 canvas5.place(x=300, y=300, anchor=CENTER)
 canvas5.create_rectangle(0, 0, 100, 100, fill="blue")
 
+canvas6 = Canvas(tk, width=100, height=100)
+canvas6.place(x=200, y=400, anchor=CENTER)
+canvas6.create_rectangle(0, 0, 100, 100, fill="yellow")
+
 def drag(event):
     #print(event.x_root, event.y_root)
     mouse_x = canvas.winfo_pointerx() - canvas.winfo_rootx()
@@ -51,5 +55,6 @@ canvas2.bind("<B1-Motion>", drag)
 canvas3.bind("<B1-Motion>", drag)
 canvas4.bind("<B1-Motion>", drag)
 canvas5.bind("<B1-Motion>", drag)
+canvas6.bind("<B1-Motion>", drag)
 
 tk.mainloop()
